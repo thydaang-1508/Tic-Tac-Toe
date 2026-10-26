@@ -1,0 +1,8 @@
+N = 9
+WIN_LEN = 5
+
+CELL = 70
+DWELL = 1.2
+
+X_COLOR = (60,60,230)
+O_COLOR = (200,110,20)
