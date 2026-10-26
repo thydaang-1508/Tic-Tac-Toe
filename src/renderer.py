@@ -993,7 +993,7 @@ class Renderer:
         for i, (number, title, detail) in enumerate(instructions):
             y = 225 + i * 67
             cv2.circle(frame, (245, y - 8), 21, ACCENT, -1, AA)
-            text(frame, number, 245, y, 0.58, WHITE, 2)
+            text(frame, number, 245, y - 8, 0.58, WHITE, 2)
             text(frame, title, 290, y - 8, 0.72, WHITE, 2, "left")
             text(frame, detail, 290, y + 18, 0.5, MUTED, 1, "left")
 
@@ -1023,7 +1023,7 @@ class Renderer:
         text(frame, "Type a name, then hold LET'S GO to start", 160, 365,
              0.48, MUTED, 1, "left")
         text(frame, "CHOSEN PICTURE", 350, 414, 0.55, MUTED, 1)
-        avatar(frame, 350, 475, 54, sel, YELLOW, 4)
+        avatar(frame, 350, 475, 27, sel, YELLOW, 2)
         text(frame, avatars.name(sel), 350, 540, 0.58, YELLOW, 1)
         if message:
             text(frame, message, 160, 585, 0.48, RED, 1, "left")
