@@ -1,3 +1,4 @@
-   echo "venv/" >> .gitignore
-   echo "__pycache__/" >> .gitignore
-   echo "*.pyc" >> .gitignore
+.venv/
+node_modules/
+__pycache__/
+*.log
