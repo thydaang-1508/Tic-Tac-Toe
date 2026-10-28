@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "name": "theara",
   "avatar": 11,
+=======
+  "name": "PIN Anong",
+  "avatar": 4,
+>>>>>>> feature/game-design
   "stats": {
     "wins": 23,
     "losses": 9,

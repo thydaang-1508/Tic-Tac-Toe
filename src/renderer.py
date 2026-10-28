@@ -39,7 +39,7 @@ THEME = "logic"           # "logic" = blueprint X/O logic board, "tulip" = tulip
 NEON = (230, 205, 90)     # cyan-ish accent (BGR)
 GRID_MINOR = (58, 40, 30)
 GRID_MAJOR = (84, 60, 44)
-HAND_FOR = {"X": "Right", "O": "Left"}   # right hand plays X, left hand plays O
+HAND_FOR = {"X": "Left", "O": "Right"}  # right hand plays X, left hand plays O
 
 
 # ======================= background =======================
@@ -893,7 +893,7 @@ class Renderer:
             text(frame, "No hand - show your hand", W - 185, 38, 0.55, WHITE, 1)
             return frame
         hand = self._hand if self._hand in HAND_FOR.values() else None
-        mark = {"Right": "X", "Left": "O"}.get(hand)
+        mark = {"Left": "X", "Right": "O"}.get(hand)
         col = X_COLOR if mark == "X" else O_COLOR if mark == "O" else YELLOW
         panel(frame, W - 260, 18, 230, 40, CARD, 0.9, 20, BORDER, shadow=True)
         cv2.circle(frame, (W - 235, 38), 6, GREEN, -1, AA)
@@ -1057,7 +1057,7 @@ class Renderer:
         text(frame, "GESTURE TIC TAC TOE", W // 2, 55, 1.8, WHITE, 4, shadow=True)
         draw_mark(frame, "X", W // 2 - 385, 55, 20, 7)
         draw_mark(frame, "O", W // 2 + 385, 55, 22, 7)
-        text(frame, "Right hand = X     Left hand = O     |     pick a character and a name", W // 2, 98, 0.62, WHITE, 1, shadow=True)
+        text(frame, "Left hand = X     Right hand = O   |     pick a character and a name", W // 2, 98, 0.62, WHITE, 1, shadow=True)
 
         # ----- left: player card -----
         panel(frame, 60, 125, 350, 565, CARD, 0.90, 28, BORDER, shadow=True)
