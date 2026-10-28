@@ -58,6 +58,9 @@ class HandTracker:
         for landmarks, handedness in zip(result.hand_landmarks, result.handedness):
             category = handedness[0]
             label = category.category_name
+
+# Camera frame is not mirrored, so swap the labels
+            label = "Left" if label == "Right" else "Right"
             if label not in ("Left", "Right") or category.score < 0.6:
                 continue
             tip = landmarks[self.INDEX_TIP]
